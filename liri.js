@@ -64,8 +64,14 @@ function spotify(songName) {
         }
         else {
             
-            
-            console.log(data);
+            var dataArr = JSON.stringify(data, null, 2)
+            console.log(dataArr);
+            songInfo = data.tracks.items;
+            console.log(dataArr);
+            console.log("Artist:" + songInfo[0].name +
+                        "Song name:" + songInfo[0].name +
+                        "Song Preview:" songInfo[0].preview_url +
+                      "Album:" songInfo[0].album.name);                       
         }
 
 
