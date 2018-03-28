@@ -62,15 +62,23 @@ function spotify(songName) {
         if (err) {
             return console.log('Error occurred: ' + err);
         }
+        else {
+            
+            
+            console.log(data);
+        }
 
-        console.log(data);
-    });
+
+    })
+    
 };
+                   
+
 
 function movieThis(movieTitle) {
 
     var movieName= "";
-    movieTitle = movieTitle || process.argv[3] || "Mr. Nobody";
+    movieTitle = movieTitle|| process.argv[3] || "Mr. Nobody";
 
 // encode the URL with %20
     for (var i = 2; i < movieTitle.length; i++) {
